@@ -49,6 +49,9 @@ class NCBIClient {
     }
     // summaries
     async summaries(pmids) {
+        if (pmids.length === 0) {
+            return [];
+        }
         const params = new URLSearchParams({
             db: "pubmed",
             id: pmids.join(","),
@@ -108,9 +111,6 @@ class NCBIClient {
         }
         else if (type === "similar") {
             ids = data.linksets[0].linksetdbs.find((db) => db.linkname === "pubmed_pubmed")?.links || [];
-        }
-        if (ids.length === 0) {
-            return [];
         }
         return await this.summaries(ids);
     }
