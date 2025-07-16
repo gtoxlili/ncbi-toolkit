@@ -134,7 +134,7 @@ class NCBIClient {
             throw new NCBIError_1.NCBIError(`HTTP ${response.status}: ${response.statusText}`, response.status);
         }
         const xml = this.xmlParser.parse(await response.text());
-        return xml.PubmedArticleSet.PubmedArticle.MedlineCitation.Article.Abstract.AbstractText || "";
+        return JSON.stringify(xml.PubmedArticleSet.PubmedArticle.MedlineCitation.Article.Abstract.AbstractText) || "";
     }
     // https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?retmode=xml&db=pmc&id=3315798
     async fulltext(pmid) {
