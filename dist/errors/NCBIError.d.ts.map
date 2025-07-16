@@ -1,0 +1,1 @@
+{"version":3,"file":"NCBIError.d.ts","sourceRoot":"","sources":["../../src/errors/NCBIError.ts"],"names":[],"mappings":"AAAA,qBAAa,SAAU,SAAQ,KAAK;IAGzB,UAAU,CAAC,EAAE,MAAM;IACnB,QAAQ,CAAC,EAAE,GAAG;gBAFrB,OAAO,EAAE,MAAM,EACR,UAAU,CAAC,EAAE,MAAM,YAAA,EACnB,QAAQ,CAAC,EAAE,GAAG,YAAA;CAKxB"}
